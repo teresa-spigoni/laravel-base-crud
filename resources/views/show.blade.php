@@ -17,9 +17,16 @@
                 <div><b>Fermentazione: </b>{{$beer->fermentation}}</div>
                 <div><b>Gradazione alcolica: </b>{{$beer->alcohol_vol}}</div>
                 <div><b>Colore: </b>{{$beer->color}}</div>
-                <div><b>Gusto: </b>{{$beer->taste}}</div>
+                <div class="taste"><b>Gusto: </b>{{$beer->taste}}</div>
                 <div><b>Temperatura di servizio: </b>{{$beer->temperature}}</div>
                 <div><b>Origine e anno: </b>{{$beer->origin}} {{$beer->year}}</div>
+            </div>
+
+            <div class="beer">
+                B <br>
+                E <br>
+                E <br>
+                R
             </div>
         </div>
 

@@ -14,7 +14,7 @@
     .beer-table{
         width: 1200px;
         margin: 20px auto;
-        box-shadow: 0 15px 30px #dee2e6;
+        box-shadow: 0 0 30px #dee2e6;
 
         .name-col{
             width: 200px;
@@ -45,19 +45,44 @@
 }
 
 #show-root{
+    overflow: hidden;
+
+    @keyframes example {
+        0%   {bottom: -100vh;}
+        100% {bottom: 0;}
+    }
+
     .description{
-        width: 400px;
         display: inline-block;
         margin-left: 60px;
+        padding: 30px;
+        border-radius: 0 0 0 50px;
+        border-bottom: 5px solid #dee2e6;
         font-size: 13px;
+        box-shadow: 0 0 30px #dee2e6;
+        animation: example;
+        animation-duration: 3s;
+        position: relative;
 
         h1{
             font-size: 46px;
-            width: 600px;
+            text-shadow: 2px 2px 3px #c1c1c1;
         }
 
         b{
             font-size: 16px;
         }
+
+        .taste{
+            width: 350px;
+        }
+    }
+
+    .beer{
+        font-size: 110px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 50px;
     }
 }

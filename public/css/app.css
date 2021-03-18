@@ -10009,7 +10009,7 @@ h3 {
 #root .beer-table {
   width: 1200px;
   margin: 20px auto;
-  box-shadow: 0 15px 30px #dee2e6;
+  box-shadow: 0 0 30px #dee2e6;
 }
 #root .beer-table .name-col {
   width: 200px;
@@ -10033,16 +10033,53 @@ h3 {
   vertical-align: -280px;
 }
 
+#show-root {
+  overflow: hidden;
+}
+@-webkit-keyframes example {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes example {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0;
+  }
+}
 #show-root .description {
-  width: 400px;
   display: inline-block;
   margin-left: 60px;
+  padding: 30px;
+  border-radius: 0 0 0 50px;
+  border-bottom: 5px solid #dee2e6;
   font-size: 13px;
+  box-shadow: 0 0 30px #dee2e6;
+  -webkit-animation: example;
+          animation: example;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  position: relative;
 }
 #show-root .description h1 {
   font-size: 46px;
-  width: 600px;
+  text-shadow: 2px 2px 3px #c1c1c1;
 }
 #show-root .description b {
   font-size: 16px;
+}
+#show-root .description .taste {
+  width: 350px;
+}
+#show-root .beer {
+  font-size: 110px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }

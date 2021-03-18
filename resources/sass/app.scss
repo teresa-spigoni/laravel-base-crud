@@ -6,3 +6,58 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#root{
+    width: 1200px;
+    margin: 20px auto;
+
+    .beer-table{
+        width: 1200px;
+        margin: 20px auto;
+        box-shadow: 0 15px 30px #dee2e6;
+
+        .name-col{
+            width: 200px;
+            font-size: 18px;
+        }
+
+        .taste-col{
+            width: 300px;
+        }
+
+        .img-col{
+            width: 200px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .index-beer-img{
+            width: 100px;
+        }
+
+    }
+}
+
+.show-beer-img{
+    width: 200px;
+    margin: 40px;
+    vertical-align: -280px;
+}
+
+#show-root{
+    .description{
+        width: 400px;
+        display: inline-block;
+        margin-left: 60px;
+        font-size: 13px;
+
+        h1{
+            font-size: 46px;
+            width: 600px;
+        }
+
+        b{
+            font-size: 16px;
+        }
+    }
+}

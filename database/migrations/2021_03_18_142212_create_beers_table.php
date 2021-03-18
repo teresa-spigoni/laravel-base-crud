@@ -26,6 +26,7 @@ class CreateBeersTable extends Migration
             $table->string('origin', 50);
             $table->smallInteger('year');
             $table->float('price', 5, 2);
+            $table->string('image', 2100);
             $table->timestamps();
         });
     }

@@ -10004,7 +10004,12 @@ h3 {
 }
 #root {
   width: 1200px;
-  margin: 20px auto;
+  margin: 20px auto 80px auto;
+  padding-bottom: 80px;
+  position: relative;
+}
+#root h1 {
+  font-size: 40px;
 }
 #root .beer-table {
   width: 1200px;
@@ -10014,6 +10019,9 @@ h3 {
 #root .beer-table .name-col {
   width: 200px;
   font-size: 18px;
+}
+#root .beer-table .name-col a {
+  color: inherit;
 }
 #root .beer-table .taste-col {
   width: 300px;
@@ -10026,15 +10034,25 @@ h3 {
 #root .beer-table .index-beer-img {
   width: 100px;
 }
-
-.show-beer-img {
-  width: 200px;
-  margin: 40px;
-  vertical-align: -280px;
+#root .add {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#root .add a {
+  color: #fff;
+}
+#root .add:hover a {
+  text-decoration: none;
 }
 
 #show-root {
   overflow: hidden;
+}
+#show-root .show-beer-img {
+  height: 650px;
+  margin: 40px;
+  vertical-align: -280px;
 }
 @-webkit-keyframes example {
   0% {
@@ -10082,4 +10100,11 @@ h3 {
   position: absolute;
   top: 20px;
   right: 50px;
+}
+
+#create-root .create-form {
+  width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 0 20px #dee2e6;
 }

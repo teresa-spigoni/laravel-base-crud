@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 #root{
     width: 1200px;
     margin: 20px auto 80px auto;
@@ -44,6 +47,20 @@
 
         .index-beer-img{
             width: 100px;
+        }
+
+        .buttons-col{
+            padding-top: 120px;
+
+            .btn{
+                width: 40px;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            .btn a{
+                color: #fff;
+            }
         }
     }
 
@@ -101,6 +118,18 @@
         .taste{
             width: 350px;
         }
+
+        .btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            padding: 5px 15px;
+        }
+
+        .btn a{
+            color: #fff;
+        }
     }
 
     .beer{
@@ -112,9 +141,9 @@
     }
 }
 
-#create-root{
+#create-root, #edit-root{
 
-    .create-form{
+    .the-form{
         width: 600px;
         margin: 40px auto;
         padding: 20px;

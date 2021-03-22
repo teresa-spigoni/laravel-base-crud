@@ -26,6 +26,7 @@
                 <th scope="col">Origin</th>
                 <th scope="col">Year</th>
                 <th scope="col">Image</th>
+                <th scope="col">Actions</th>
                 </tr>
 
             </thead>
@@ -49,6 +50,21 @@
                         <td>{{$beer->origin}}</td>
                         <td>{{$beer->year}}</td>
                         <td class="img-col"><img class="index-beer-img" src="{{$beer->image}}" alt=""></td>
+                        <td class="buttons-col">
+                            <button class="btn btn-success"><a href="{{route('beers.show', compact('beer'))}}"><i class="fas fa-eye"></i></a></button>
+
+                            <button class="btn btn-success"><a href="{{route('beers.edit', compact('beer'))}}"><i class="far fa-edit"></i></a></button>
+
+                            <form action="{{route('beers.destroy', compact('beer'))}}" method="post">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+
+                            </form>
+                        </td>
                     </tr>
 
                 @endforeach

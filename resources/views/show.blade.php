@@ -19,6 +19,7 @@
             <div class="taste"><b>Gusto: </b>{{$beer->taste}}</div>
             <div><b>Temperatura di servizio: </b>{{$beer->temperature}}</div>
             <div><b>Origine e anno: </b>{{$beer->origin}} {{$beer->year}}</div>
+            <button class="btn btn-danger"><a href="{{route('beers.edit', compact('beer'))}}">Edit <i class="far fa-edit"></i></a></button>
         </div>
 
         <div class="beer">

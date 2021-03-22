@@ -1,18 +1,19 @@
 @extends('layout')
 
 @section('title')
-    Create
+    Edit
 @endsection
 
 @section('content')
 
-    <div id="create-root">
+    <div id="edit-root">
 
         <div class="the-form">
 
-            <h1>Insert a new item</h1>
+            <h1>Edit the item</h1>
 
-            @include('form', ['edit' => false])
+            @include('form', ['edit' => true])
+
 
         </div>
 

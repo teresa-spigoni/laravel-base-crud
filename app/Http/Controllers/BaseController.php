@@ -36,10 +36,7 @@ class BaseController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'image' => 'required'
-        ]);
+        $this->formValidation($request);
         $data = $request->all();
         $beerNew = new Beer();
         $beerNew->fill($data);
@@ -52,7 +49,7 @@ class BaseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $beer
+     * @param  Beer  $beer
      * @return \Illuminate\Http\Response
      */
     public function show(Beer $beer)
@@ -63,34 +60,48 @@ class BaseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Beer  $beer
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Beer $beer)
     {
-        //
+        return view('edit', compact('beer'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Beer $beer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Beer $beer)
     {
-        //
+
+        $this->formValidation($request);
+        $data = $request->all();
+        $beer->update($data);
+
+        return view('show', compact('beer'));
+    }
+
+    protected function formValidation(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'image' => 'required'
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Beer  $beer
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beer $beer)
     {
-        //
+        $beer->delete();
+
+        return view('index');
     }
 }

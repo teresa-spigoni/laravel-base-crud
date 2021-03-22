@@ -26,7 +26,7 @@
                 <th scope="col">Origin</th>
                 <th scope="col">Year</th>
                 <th scope="col">Image</th>
-                <th scope="col">Actions</th>
+                <th scope="col"></th>
                 </tr>
 
             </thead>
@@ -72,7 +72,7 @@
 
         </table>
 
-        <button class="btn btn-primary add" ><a href="{{route('beers.create', compact('beer'))}}">Add a beer</a></button>
+        <button class="btn btn-success add" ><a href="{{route('beers.create', compact('beer'))}}">Add a beer</a></button>
 
     </div>
 
